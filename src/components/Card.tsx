@@ -1,5 +1,8 @@
 import "../styles/components/card.css";
 
+import star from "../assets/icons/Star.svg";
+import starFill from "../assets/icons/Star_fill.svg";
+
 export interface CardProps {
   id: number;
   image: string;
@@ -24,7 +27,7 @@ export function Card({ popular, image, name, price, rating, votes, available }: 
       </div>
       <div className="card__footer">
         <div className="card__rating">
-          <img src={rating ? "/src/assets/icons/Star_fill.svg" : "/src/assets/icons/Star.svg"} alt="Star icon" />
+          <img src={rating ? starFill : star} alt="Star icon" />
           {rating ? (
             <p>
               {Number(rating).toFixed(1)} <span>({votes} votes)</span>

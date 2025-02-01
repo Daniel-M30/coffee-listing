@@ -4,6 +4,10 @@ import { useSelectedButtonContext } from "../hooks/useSelectedButton";
 import { useQuery } from "@tanstack/react-query";
 import "../styles/pages/home.css";
 
+import lineVector from "../assets/icons/vector.svg";
+import backgroundSm from "../assets/images/bg-cafe-sm.jpg";
+import backgroundLg from "../assets/images/bg-cafe-lg.jpg";
+
 export function Home() {
   const { selectedButton } = useSelectedButtonContext();
 
@@ -19,8 +23,8 @@ export function Home() {
     <div className="home__container">
       <div className="home__bg-image">
         <picture>
-          <source media="(max-width: 720px)" srcSet="/src/assets/images/bg-cafe-sm.jpg" />
-          <img src="/src/assets/images/bg-cafe-lg.jpg" alt="Coffee image" />
+          <source media="(max-width: 720px)" srcSet={backgroundSm} />
+          <img src={backgroundLg} alt="Coffee image" />
         </picture>
       </div>
       <div className="home__content">
@@ -31,7 +35,7 @@ export function Home() {
               Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins,
               expertly roasted in small batches and shipped fresh weekly.
             </h4>
-            <img src="/src/assets/icons/vector.svg" alt="Line background" />
+            <img src={lineVector} alt="Line background" />
           </div>
           <div className="home__buttons">
             <Button id="allProducts" label="All Products" />
