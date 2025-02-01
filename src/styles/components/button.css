@@ -1,0 +1,13 @@
+.button__container {
+  border: 0;
+  background-color: transparent;
+  color: #fef7ee;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button__container--selected {
+  background-color: #4d5562 !important;
+}
